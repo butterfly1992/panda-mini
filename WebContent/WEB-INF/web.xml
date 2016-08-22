@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>mini</display-name>
+  <listener>
+    <listener-class>com.mini.server.tools.MySpecialListener</listener-class>
+  </listener>
+  <filter>
+    <description></description>
+    <display-name>SetCharacterEncodingFilter</display-name>
+    <filter-name>SetCharacterEncodingFilter</filter-name>
+    <filter-class>com.mini.server.tools.SetCharacterEncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SetCharacterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>miniCount</display-name>
+    <servlet-name>miniCount</servlet-name>
+    <servlet-class>com.mini.server.servlet.miniCount</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>miniCount</servlet-name>
+    <url-pattern>/moper</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MiniRequestServlet</display-name>
+    <servlet-name>MiniRequestServlet</servlet-name>
+    <servlet-class>com.mini.server.servlet.MiniReq</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MiniRequestServlet</servlet-name>
+    <url-pattern>/mreq</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>miniOper</display-name>
+    <servlet-name>miniOper</servlet-name>
+    <servlet-class>com.mini.server.servlet.miniOper</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>miniOper</servlet-name>
+    <url-pattern>/mactive</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ClearMemServlet</display-name>
+    <servlet-name>ClearMemServlet</servlet-name>
+    <servlet-class>com.mini.server.servlet.total</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClearMemServlet</servlet-name>
+    <url-pattern>/mtotal</url-pattern>
+  </servlet-mapping>
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
